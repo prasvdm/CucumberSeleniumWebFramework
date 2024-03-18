@@ -4,18 +4,18 @@ package utility;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.chrome.ChromeOptions;
-import utility.BrowserDriver;
 
 public class Hooks {
     public static BrowserDriver driver;
     public static ChromeOptions options;
+
     @Before
-    public void setUp(){
+    public void setUp() {
         driver = new BrowserDriver();
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         driver.close();
     }
 }
